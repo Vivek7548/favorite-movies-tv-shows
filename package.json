@@ -1,0 +1,9 @@
+{
+    "name": "favorite-movies-monorepo",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "dev": "powershell -ExecutionPolicy Bypass -File dev.ps1",
+        "dev:stop": "powershell -ExecutionPolicy Bypass -File stop-dev.ps1"
+    }
+}

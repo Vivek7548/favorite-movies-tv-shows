@@ -1,0 +1,23 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Favorite {
+  id          Int      @id @default(autoincrement())
+  title       String
+  // store type as string (e.g. "MOVIE" or "TV_SHOW") for Sqlite compat
+  type        String
+  director    String
+  budget      String
+  location    String
+  duration    String
+  yearTime    String
+  description String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
